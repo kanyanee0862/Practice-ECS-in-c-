@@ -14,10 +14,8 @@ class Game
 public:
 	//Constructor
 	Game();
-	//Deconstructor
-	~Game();
 	//Initialize 
-	void Initialize();
+	bool Initialize();
 	//Game Loop
 	void GameLoop();
 	//Shut down windows
@@ -43,7 +41,7 @@ private:
 	void LoadData();
 	void UnloadData();
 	//Texture 
-	std::unordered_map <std::string,SDL_Texture*> Texture;
+	std::unordered_map <std::string, SDL_Texture*> Texture;
 	//ベクトル型でクラスのにメンバーを追加
 	std::vector<class Actor*> actor;
 	std::vector<class Actor*> pendingActor;
@@ -51,7 +49,14 @@ private:
 	//Use this function to create window
 	//この関数を使ってウィンドウを生成
 	SDL_Window* window;
-	//
+	//A structure that contain a rendering state
 	SDL_Renderer* renderer;
-
+	//Time since start
+	uint32_t ticksCount;
+	//Check if game is running
+	bool IsRunning;
+	//Check if Actor is updating
+	bool updatingActor;
+	//Class player
+	class Slime* slime;
 }
