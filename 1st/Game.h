@@ -5,10 +5,11 @@
  * @date 2019/3/2
  */
 #pragma once
+#include <SDL.h>
 #include<iostream>
 #include<vector>
 #include<unordered_map>
-#include "SDL.h"
+
 class Game
 {
 public:
@@ -48,15 +49,15 @@ private:
 	std::vector<class SpriteComponent*> sprites;
 	//Use this function to create window
 	//この関数を使ってウィンドウを生成
-	SDL_Window* window;
+	SDL_Window* m_Window;
 	//A structure that contain a rendering state
-	SDL_Renderer* renderer;
+	SDL_Renderer* m_Renderer;
 	//Time since start
-	uint32_t ticksCount;
+	Uint32 m_ticksCount;
 	//Check if game is running
-	bool IsRunning;
+	bool m_IsRunning;
 	//Check if Actor is updating
-	bool updatingActor;
+	bool m_UpdatingActor;
 	//Class player
 	class Slime* slime;
-}
+};

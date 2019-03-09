@@ -1,3 +1,2 @@
 ﻿  Game.cpp
-C:\Users\zek_v\Desktop\Game\1st\1st\Game.cpp(4): error C2059: syntax error: '{'
-C:\Users\zek_v\Desktop\Game\1st\1st\Game.cpp(4): error C2550: 'Game': constructor initializer lists are only allowed on constructor definitions
+  1st.vcxproj -> C:\Users\zek_v\Desktop\Game\1st\Practice ECS in c++\x64\Debug\1st.exe
