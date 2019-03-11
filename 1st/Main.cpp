@@ -1,12 +1,14 @@
 #include"SDL.h"
 #include<iostream>
+#include "Game.h"
 int main(int argc, char* argv[])// argc = argument count, argv = argument  
 {
-	if (SDL_Init(SDL_INIT_EVERYTHING) != 0) {
-		std::cerr << "SDL_Init error: " << SDL_GetError() << std::endl;
-		return 1;
+	Game game;
+	bool success = game.Initialize();
+	if (success)
+	{
+		game.GameLoop();
 	}
-
-	SDL_Quit();
+	game.ShutDown();
 	return 0;
 }
